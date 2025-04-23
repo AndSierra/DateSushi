@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cita de Sushi 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function showView(id) {
+      document.querySelectorAll('.view').forEach(view => view.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    window.onload = () => showView('landing');
+  </script>
+</head>
+<body>
+  <div class="container">
+    <!-- Landing Page -->
+    <section id="landing" class="view">
+      <h1 class="text-center">¡Esta servidora te tiene una sorpresa! 💌</h1>
+      <div class="gif-container">
+        <img src="https://media.tenor.com/EnR3Zoyp3WMAAAAi/monkey.gif" alt="Monkey Gif 1" />
+      </div>
+      <div class="text-center">
+        <button onclick="showView('sushiDate')" class="btn">Te ama tu esposa 💖</button>
+      </div>
+    </section>
+
+    <!-- Sushi Date Info -->
+    <section id="sushiDate" class="view" style="display:none;">
+      <header>
+        <h1>🍣 Nuestra Cita de Sushi</h1>
+        <p>Una aventura deliciosa hecha con amor 💕</p>
+      </header>
+
+      <section class="step">
+        <h2>🛒 Paso 1: Vamos de Compras</h2>
+        <ul>
+          <li>Arroz para sushi 🍚</li>
+          <li>Alga nori 🌿</li>
+          <li>Pescado fresco o salmón 🍣</li>
+          <li>Palitos de bambú para enrollar 🍥</li>
+          <li>Aguacate 🥑, pepino 🥒 y queso crema 🧀</li>
+          <li>Salsa soya y salsa teriyaki</li>
+          <li>Camarón 🍤</li>
+          <li>Panko 🍣</li>
+        </ul>
+      </section>
+
+      <section class="step">
+        <h2>👩‍🍳 Paso 2: ¡A Cocinar Junt@s!</h2>
+        <ol>
+          <li>Cocinar el arroz con amor</li>
+          <li>Preparar los ingredientes</li>
+          <li>Armar nuestros rolls (¡en equipo!)</li>
+          <li>Probar cada creación y darle nombre 🥰</li>
+          <li>¡Sacar muchas fotos para recordar! 📸</li>
+        </ol>
+      </section>
+
+      <div class="text-center">
+        <button onclick="showView('location')" class="btn">❤️ ¡Empecemos nuestra cita!</button>
+      </div>
+    </section>
+
+    <!-- Location View -->
+    <section id="location" class="view" style="display:none;">
+      <h2 class="text-center">📍 Aquí haremos nuestro sushi</h2>
+      <div class="gif-container">
+        <img src="https://media.tenor.com/Bm40EcXD2EAAAAAi/monkey.gif" alt="Monkey Kitchen Gif" />
+      </div>
+      <div class="text-center">
+        <button onclick="showView('landing')" class="btn">Volver al inicio 🏠</button>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
